@@ -7,18 +7,20 @@ package com.kawal.prsc;
 public class UserBean {
     int id;
     String name;
-    String email;
     String phone;
+    String email;
+    String location;
     String password;
 
     public UserBean() {
     }
 
-    public UserBean(int id, String name, String email, String phone, String password) {
+    public UserBean(int id, String name, String phone, String email, String location, String password) {
         this.id = id;
         this.name = name;
-        this.email = email;
         this.phone = phone;
+        this.email = email;
+        this.location = location;
         this.password = password;
     }
 
@@ -38,6 +40,14 @@ public class UserBean {
         this.name = name;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -46,12 +56,12 @@ public class UserBean {
         this.email = email;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getLocation() {
+        return location;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getPassword() {
@@ -67,8 +77,9 @@ public class UserBean {
         return "UserBean{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", location='" + location + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
